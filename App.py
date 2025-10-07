@@ -90,12 +90,10 @@ disease_advice = {
     'urinary tract infection': "Stay hydrated, take prescribed antibiotics, and maintain good hygiene. Consult a doctor for appropriate treatment."
 }
 
-howto = """Welcome to the <b>Medical Chatbot</b>, powered by Gradio.
-Currently, the chatbot can WELCOME YOU, PREDICT DISEASE based on your symptoms and SUGGEST POSSIBLE SOLUTIONS AND RECOMENDATIONS, and BID YOU FAREWELL.
+howto = """Welcome to the <b>Disease Prediction Chatbot</b>, powered by Gradio.
+Currently, the chatbot can WELCOMES YOU, PREDICT DISEASE based on your symptoms and SUGGEST POSSIBLE SOLUTIONS AND RECOMENDATION.
 <br><br>
-Here's a quick guide to get you started:<br><br>
-<b>How to Start:</b> Simply type your messages in the textbox to chat with the Chatbot and press enter!<br><br>
-The bot will respond based on the best possible answers to your messages. For now, let's keep it SIMPLE as I'm working hard to enhance its capabilities in the future.
+<b>Here's a quick guide to get you started:</b> Simply type "hi" message in the textbox to chat with the Chatbot and press enter!
 """
 
 # Random greetings and responses (fixed commas)
@@ -110,18 +108,18 @@ greetings = [
     "hey, how's your day?", "hi, how have you been?", "greetings",
 ]
 responses = [
-    "Thank you for using our medical chatbot. Please provide the symptoms you're experiencing, and I'll do my best to predict the possible disease.",
+    "Thank you for using our chatbot. Please provide the symptoms you're experiencing, and I'll do my best to predict the possible disease.",
     "Hello! I'm here to help you with medical predictions based on your symptoms. Please describe your symptoms in as much detail as possible.",
-    "Greetings! I am a specialized medical chatbot trained to predict potential diseases based on the symptoms you provide. Kindly list your symptoms explicitly.",
-    "Welcome to the medical chatbot. To assist you accurately, please share your symptoms in explicit detail.",
-    "Hi there! I'm a medical chatbot specialized in analyzing symptoms to suggest possible diseases. Please provide your symptoms explicitly.",
-    "Hey! I'm your medical chatbot. Describe your symptoms with as much detail as you can, and I'll generate potential disease predictions.",
-    "How can I assist you today? I'm a medical chatbot trained to predict diseases based on symptoms. Please be explicit while describing your symptoms.",
-    "Hello! I'm a medical chatbot capable of predicting diseases based on the symptoms you provide. Your explicit symptom description will help me assist you better.",
+    "Greetings! I am a specialized chatbot trained to predict potential diseases based on the symptoms you provide. Kindly list your symptoms explicitly.",
+    "Welcome to the chatbot. To assist you accurately, please share your symptoms in explicit detail.",
+    "Hi there! I'm a chatbot specialized in analyzing symptoms to suggest possible diseases. Please provide your symptoms explicitly.",
+    "Hey! I'm your chatbot. Describe your symptoms with as much detail as you can, and I'll generate potential disease predictions.",
+    "How can I assist you today? I'm a chatbot trained to predict diseases based on symptoms. Please be explicit while describing your symptoms.",
+    "Hello! I'm a chatbot capable of predicting diseases based on the symptoms you provide. Your explicit symptom description will help me assist you better.",
     "Greetings! I'm here to help with medical predictions. Describe your symptoms explicitly, and I'll offer insights into potential diseases.",
-    "Hi, I'm the medical chatbot. I've been trained to predict diseases from symptoms. The more explicit you are about your symptoms, the better I can assist you.",
+    "Hi, I'm the chatbot. I've been trained to predict diseases from symptoms. The more explicit you are about your symptoms, the better I can assist you.",
     "Hi, I specialize in medical predictions based on symptoms. Kindly provide detailed symptoms for accurate disease predictions.",
-    "Hello! I'm a medical chatbot with expertise in predicting diseases from symptoms. Please describe your symptoms explicitly to receive accurate insights.",
+    "Hello! I'm a chatbot with expertise in predicting diseases from symptoms. Please describe your symptoms explicitly to receive accurate insights.",
 ]
 
 goodbyes = [
@@ -161,9 +159,9 @@ goodbye_replies = [
 
 # Create the Gradio demo
 with gr.Blocks(css="""#col_container { margin-left: auto; margin-right: auto;} #chatbot {height: 520px; overflow: auto;}""") as demo:
-    gr.HTML('<h1 align="center">Medical Chatbot</h1>')  # Fixed quote
-    gr.HTML('<h3 align="center">To know more about this project click, <a href="https://github.com/vyasbabbadi" target="_blank">Here</a></h3>')
-    with gr.Accordion("Follow these Steps to use the Gradio WebUI", open=True):
+    gr.HTML('<h1 align="center">Disease Prediction Chatbot</h1>')  # Fixed quote
+    gr.HTML('<h3 align="center">To know more about this project, <a href="https://github.com/Vyasbabbadi/Disease_Prediction_Chatbot" target="_blank">Click Here</a></h3>')
+    with gr.Accordion("Follow these Steps to use this Chatbot", open=True):
         gr.HTML(howto)
     chatbot = gr.Chatbot()
     msg = gr.Textbox(placeholder="Describe your symptoms...")
