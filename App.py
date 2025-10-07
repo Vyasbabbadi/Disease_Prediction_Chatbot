@@ -158,7 +158,9 @@ goodbye_replies = [
 ]
 
 # Create the Gradio demo
-with gr.Blocks(css="""#col_container { margin-left: auto; margin-right: auto;} #chatbot {height: 520px; overflow: auto;}""") as demo:
+with gr.Blocks(css="""#col_container { margin-left: auto; margin-right: auto;} #chatbot {height: 520px; overflow: auto;}
+.gr-button { background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 8px 16px; }
+.gr-button:hover { background-color: #0056b3; }""") as demo:
     gr.HTML('<h1 align="center">Disease Prediction Chatbot</h1>')  # Fixed quote
     gr.HTML('<h3 align="center">To know more about this project, <a href="https://github.com/Vyasbabbadi/Disease_Prediction_Chatbot" target="_blank">Click Here</a></h3>')
     with gr.Accordion("Follow these Steps to use this Chatbot", open=True):
